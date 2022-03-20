@@ -1,0 +1,26 @@
+If any class for which we can create only one object is known as a singleton class.
+Performance improvement and memory utilization are the advantages of singleton class.
+In singleton class one object is referenced by many number of reference variables.
+Method 1 to create singleton class-------
+Create a private static variable of Class type and create the object
+Eg public static Test t = new Test();
+Create the private constructor.
+Eg --+ private Test(){}
+Create the public static method and its return type should be of class type 
+Eg public static Test getObject (){
+return t;
+}
+We can create the object of class using the static variable also.
+Method 2 to create singleton class-------
+Create a private static variable of Class type and assign null value to it.
+Eg private static Test t = null;
+Create the private constructor
+Eg private Test(){}
+Create the public static method and its return type should be of class type.
+Eg public static Test getObject (){
+If(t==null){
+t = new Test();
+}
+return t;
+}
+If all the constructors of the class are private we can't create the child class of that class bcoz child class constructor will call the parent class constructor but the parent class constructor is private so we cant access it outside the class.

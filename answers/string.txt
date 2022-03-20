@@ -1,0 +1,45 @@
+When we create a string using the new keyword then 2 objects will be created one in the heap memory and one in the SCP but reference will point to the object present in the heap memory .
+When we create a string using the literal method then it will be created inside the SCP and reference variable will point to the SCP object.
+Garbage collector isn't allowed to access the objects present inside the SCP.
+SCP area is stored inside the method or class area and garbage collector is has access to heap memory area.
+All the SCP objects will be automatically destroyed at the time of JVM shutdown.
+Eg 
+String s1 = new string("faisal");
+For it one object is created in the heap and one in SCP memory.
+s1.concat("khan"); 
+If we Directly pass any value then it is considered as a constant and it will be created inside the SCP .and S1.concat() will create one object in heap at runtime.
+a class that creates object only when its content is different then already existing object.
+Make the class final and make all the data members of the class private.
+CLASS TEST{
+PRIVATE INT I;
+TEST(INT I)
+{
+THIS.I=I;
+}
+PUBLIC TEST MODIFY(INT I)
+{
+IF(THIS.I==I)
+{
+Return this;
+}
+ELSE 
+{
+RETURN NEW THIS( I);
+}
+}
+}
+Final and immutability is different 
+Eg
+Final Stringbuffer sb = new stringbuffer ("test");
+Sb.append("class");it is valid bcoz we are modifying the object.
+Sb = sb.append("delete"); it is not allowed bcoz reassignment for final is not allowed.
+If we provide direct values inside the string then it will be performed at compile time but if we provide the variable then its value will be evaluated at runtime only.
+Runtime created objects will be created only inside the heap memory area but not in the SCP.
+INTERN METHOD
+if using the heap area object reference we want to create a reference to SCP area value then intern method is used.
+String s = new String ("faisal");
+One object is created in heap and pointed by s and another object is created in SCP for future use.
+To create reference to the SCP object we need to use the intern method on the object for which we want to point the reference to SCP object.
+String s2 = s.intern(); now s2 will point to the object of S present in the SCP memory area.
+If the corresponding SCP object is not present and if we call the intern method on that object it will create the object inside the SCP memory area and reference variable will point to it .
+Along with string all wrapper class objects are also immutable.

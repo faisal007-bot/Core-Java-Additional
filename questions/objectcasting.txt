@@ -1,0 +1,1 @@
+whenever we typecast it creates new variable or just refers to the already existing variable?

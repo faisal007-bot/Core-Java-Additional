@@ -1,0 +1,3 @@
+where should we use static blocks?
+methods to execute java progam without main method?
+using static variable and static method and exiting the program.

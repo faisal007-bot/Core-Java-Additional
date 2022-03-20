@@ -1,0 +1,17 @@
+who is responsible to create the object of exception?
+printstacktrace , tostring and getmessage difference?
+which method is used by default exception handler?
+can we throw same exception inside the nested catch block as of outer catch block?
+can we write any code after using the throw keyword?
+why throws keyword is used?
+for what kind of exception we should use the throws keyword?
+why should we use throw keyword?
+when noClassDefFoundException Occurs?
+resouces when will be closed in case of try with resources?
+which interface implemented by resources used inside the try with resources?
+which method is present inside the autoCloseable interface?
+can we use resources again inside the try block which are defined inside the try with resources?
+can we use only try with resources without catch and finally?
+what is multi catch block? 
+how to handle multiple exceptions inside the single catch block?
+can we rethrow an exception?

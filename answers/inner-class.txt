@@ -1,0 +1,59 @@
+Class inside a class
+If we want a class that can access all the properties of the outer class then we should use class inside the class.
+Interface inside a class 
+If a class has an interface and we want to provide implementation of that interface within that class then we can define an interface inside the class and all the inner classes which will provide implementation for that interface.
+Interface inside the interface 
+We can define interface inside the interface if inner interface depends on the outer interface.
+Like map interface has entry inner interface so without existing map interface the existence of entry interface is not possible.
+All the inner interface is by default public static.
+If we implement the outer interface then we doesn't need to provide the implementation of inner interface but we need to provide the implementation of outer interface.
+If we implement the inner interface then we doesn't need to provide the implementation of outer interface but we need to provide the implementation of inner interface.
+Class inside the interface
+If the functionality of the class is closely associated with the interface then we can use the class inside the interface.
+A class which is declared inside the interface is by default public static.
+Interface inside the class is always static by default but it need not to be public .
+Static nested class doesn't depends on the object creation of the outer class.
+To access static nested class members we doesnt need to create the object of outer class.
+For all the inner classes their class file name is created with outer class
+Syntax Outerclassname$innerclassname eg Outer$Inner.
+In static nested class we can declare static as well as instance members including the main method.
+We can access the static members of the outer class inside the static nested class but we cant access the instance members inside the static nested class.
+3 types of anonymous inner class------
+Anonymous inner class that extends a class
+Anonymous inner class that implements an interface
+Anonymous inner class that is defined inside the argument
+For anonymous inner class object is of child class 
+Eg Thread t = new Thread (){};t is used to refer inner class but the object is always of child class.
+For each anonymous inner class a separate class file will be generated 
+Like if Test class contains 2 anonymous inner classes then it will generate 2 class files like Test$1.class and Test$2.class .
+Anonymous inner class example that is defined inside the argument
+Eg Thread t = new Thread (new Runnable (){});
+new Thread (new Runnable (){}).start();
+Anonymous inner class can also extend only one class.
+Anonymous inner class can only implement only one interface.
+Anonymous inner class can only extend a class or implement an interface but not both extend and implement at the same time.
+We cant write constructor explicitly inside the anonymous inner class bcoz for constructors its name must be same as of class name but anonymous inner class doesn't have any name . but implicitly it generates a constructor.
+In anonymous inner class it calls the parent class constructor .
+Scope of the local inner class is limited inside the method in which it is created.
+We can declare local inner class inside instance as well as static methods.
+We can access all the static as well as instance members of the outer class inside the local inner class.
+If the outer class method is static we can access only static members of the outer class not instance members of the outer class.
+If the outer class method is instance we can access instance as well as static members of the outer class.
+From local inner class we cant access the local variable of outer class's method inside the method of inner class method but if it is declared with final keyword we can access it.
+All the final variable is replaced with value at compile time thats why it is possible to access the final local variable inside the inner class method.
+Inside local inner class we cant declare static members.
+Only allowed modifiers for local inner class are final abstract and strictfp.
+The relation between outer and inner class is HAS-A relationship.
+To run inner classes we need to use outer$inner .
+We cannot declare static members inside the regular inner class.
+We can declare only instance members inside the regular inner class.
+Creating object of inner class
+Outer o = new Outer();
+Outer.inner i = o.new inner();
+Another way
+Outer.inner i = new Outer().new Inner();
+Accessing inner class members from static area of outer class 
+Accessing inner class members from the instance area of outer class.
+From regular inner class we can access all the members of the outer class directly.static as well as non static.
+If outer class, inner class and local variable have same name suppose X then we can access local variable using X ,to access inner class X we need to use this.X and to access outer class X we need to use Outer.this.x.
+We can create as many nested inner classes we want like class A contains B and B contains C.

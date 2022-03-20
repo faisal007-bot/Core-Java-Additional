@@ -1,0 +1,21 @@
+In hashmap and linked hashmap jvm will use equals method for key insertion so it checks content of the object key instead of the reference or address of the key object.
+In identity hashmap jvm uses == operators to checks duplication of keys which is used to compare reference or address of the key object instead of content.
+This is the only difference between hashmap , linked hashmap and identity hashmap that identity hashmap checks reference instead of content.
+Hastable doesn't allow neither null key nor null value.
+If the object associated with hashmap and linked hashmap even after the object of hashmap and linked hashmap doesn't have reference even after this also the object is not eligible for garbage collection.
+If the object associated with weakhashmap and after the object of weakhashmap doesn't have reference then the object is eligible for garbage collection.
+Default constructor creates empty hashtable object of initial capacity 11.
+In hashing based data structures objects are executed from top to bottom and right to left 
+Eg 
+11th bucket or index to 0th bucket or index.
+If multiple objects are placed in the same bucket or index then they are executed from right to left.
+In properties map both the key and value should be of string type only.
+In properties map we mostly read data from the properties file.
+Methods of properties class --------
+Setproperty(string key,string value);
+Getproperty(string key);
+Enumeration propertynames();
+Load() method is used to load java properties file into java properties object.
+Store() method is used reflect changes in the properties file made using the java properties object.
+Load(inputstream is);
+Store(outputstream os,string comment);

@@ -1,0 +1,8 @@
+First identification of all the static members of the class from top to bottom.
+Then assignment of static data memebers of the class and then execution of static block from top to bottom.
+Then execution of main method after static variable assignment and execution of static blocks.
+At first at the identification phase static data members get default value as 0 and if we print it in static block original value will not be printed bcoz in identification phase it identifies all static members only and if it finds any static data members it assigns default value to it .
+At next phase static data members assigned with original value which we provided and static blocks will be executed.
+At the last phase main method will be executed after execution of static blocks.
+In case of inheritance only the main method of the class which we run will be executed.and all the process of execution will be same as in single class
+While executing static data members JVM may not identify the instance members bcoz static members execution happens before instance members so thats why it is not possible to directly access the instance members inside the static members.

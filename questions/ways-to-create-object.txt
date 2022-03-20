@@ -1,0 +1,5 @@
+create object using new keyword?
+create object using newInstance() method?
+create object using serialization and deserialization?
+create object using factory method?
+create object using clone() method?

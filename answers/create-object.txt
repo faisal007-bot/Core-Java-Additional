@@ -1,0 +1,18 @@
+1-- new keyword 
+Test t = new Test();
+2-- newInstance() method
+It returns object of object class so we need to type cast it into corresponding class 
+Test t = (Test)Class.forName("fully qualified name"). newInstance ();
+3-- Factory method
+In factory method user provides static method inside the class that returns current class object which internally uses new keyword.
+Eg 
+Test t = Test.getObject();
+Here getObject() is a static method of Test class that returns Test class's object.
+4-- clone method
+Test t = new Test();
+Test t2 = (Test)t.clone();
+5-- Deserialization
+Fileinputstream fis = new fileinputstream ("file.srv);
+Objectinputstream ois = new objectinputstream (fis);
+Suppose our object is of type Test .
+Test t = (Test)ois.getObject();

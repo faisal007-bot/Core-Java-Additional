@@ -1,0 +1,16 @@
+Using throw keyword programmer manually creates the exception object and then it gives that object to the JVM.
+Throw keyword must be used to throw customized or user defined exceptions using throw we can also throw checked and unchecked exceptions but it is mostly used to throw custom exceptions.
+After throw we cant write any statement otherwise compile time error will occur saying unreachable statement after throw.
+Throw keyword can only be used to throw objects of throwable or its child classes we cant use throw keyword with normal java objects.
+Throws keyword is used to delegate or transfer the responsibility of the exception handling to the caller of this method.
+Throws is used to declare that this method may throw and exception.
+Throws keyword is intended to use only with checked exception there is no sense of using throws keyword with unchecked exception bcoz unchecked exception are not checked by compiler.
+Throws keyword doesn't prevent the abnormal termination bcoz it only hands over the responsibility to the caller so it only convinces compiler to successfully compile the code but if at runtime any error occur and throws keyword is used them program will be terminated abnormally.so it is better to handle the exception using the try catch block bcoz it prevents abnormal termination of the program.
+If multiple methods call each other then we cant compile the code by providing throws keyword on the first method which started the chain we need to use throws keyword on each method to prepare a chaining to delegate or transfer the responsibility of exception handling from one method to another method.
+Throws keyword is valid with methods and constructors only.
+Throws keyword is only applicable for throwable and its child classes
+Normal java objects can't be used with throws keyword.
+If there is no possibility of occuring an exception inside the try block then writing catch block for that exception will generate compile time error.this rule is only applicable for fully checked exception.
+The exceptions whose all childs are checked exceptions then it is called fully checked exception.
+The exception whose some childs are checked and some childs are unchecked exceptions then it is called partially checked exception
+There are 2 partially checked exceptions in java which are throwable and exception class.

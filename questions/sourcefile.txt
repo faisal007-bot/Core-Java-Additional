@@ -1,0 +1,19 @@
+can we give any name to our source file having no public class?
+can we give any name to our source file having public class?
+which package classes and interfaces are available by default?
+if the class is final then methods will be final or not by default?
+variables of the final class are final or not by default?
+abstract class can contain final methods?
+final class can contain abstract methods?
+what access modifier is allowed for local variables?
+does jvm provides default value to static final variables?
+where we can use synchronised keyword?
+native modifier can only be used with?
+where we can use the transient keyword?
+what transient keyword does ?
+where we can use the volatile keyword?
+what volatile keyword do with variable in multithreading?
+what is adapter class in java?
+why it is recommended to make adapter class as an abstract?
+why interface doesnt support constructor?
+can we use static and instance block inside the abstract class and interface?

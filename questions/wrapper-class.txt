@@ -1,0 +1,14 @@
+which method is used to convert primtive and string to wrapper class?
+which method is used to convert wrapper class to primitve?
+valueof method with radix or base is available for which classes?
+all number related wrapper classes contains which common methods?
+which method is used to convert string to primitive type?
+parse method with radix or base is applicable for which wrapper classes?
+how to convert primtive and wrapper class objects into the string?
+which methods are used to convert into binary , hexadecimal and octadecimal string?
+which classes are final?
+why it is recommended to use valueof method to create objects?
+what is the range of the buffer used by valueof method?
+what is shallow cloning and what is deep cloning?
+how to do deep cloning?
+when to use shallow cloning and when to use deep cloning?

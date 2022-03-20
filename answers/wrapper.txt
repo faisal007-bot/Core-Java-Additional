@@ -1,0 +1,56 @@
+Almost all wrapper classes contains 2 constructors 
+First that takes primitive value and second that takes string value
+Eg Integer i= new Integer(10);Integer i = new Integer("10");
+Constructors 
+Byte = string and byte
+Short = string and short
+Integer = string and int
+Long = string and long
+Float = string , float and double
+Double = string and double
+Character = char 
+Boolean = string and boolean
+Tostring and equals method is overridden in all wrapper classes.
+Valueof method is used to convert primitive value or string into the wrapper object ,every class contains this method except the character class .
+Valueof method with string and radix or base is only present in integral wrapper classes like Byte,Short, Integer, Long.
+We can pass only between 2 to 36 allowed.
+Bcoz 0 to 9 and a to z are allowed so their sum is 36 thats why its allowed till 36 in base or radix.
+All the number wrapper class contains 6 methods for converting wrapper object into any of the primitive number datatype like 
+byteValue,shortValue,intValue,longValue,floatValue,doubleValue.
+Character class contains charValue to get the primitive char value.
+Boolean class contains booleanValue to get the primitive boolean value.
+ParseXXX method is used to convert string to primitive data types.
+Character class doesn't contain the parseCgar method.
+ParseXXX method with string and radix or base is only available for Integral wrapper classes.
+Tostring method is used to convert primitive as well as wrapper object into string object.
+Integer and Long classes contain tostring method that takes primitive value and radix to convert it into string with provided radix.
+We have tobinarystring,tooctalstring and tohexatring methods are available in Integer and Long class.
+String , stringbuffer , stringbuilder and all wrapper classes are final 
+All wrapper class objects are immutable.
+Void class is used in reflection to check whether the return type of the method is void or not.
+Void class is a class representation of void keyword.
+Automatic conversion of primitive data type to wrapper object is known as autoboxing .
+Compiler internally uses valueof method to conver primitive data type to wrapper object.
+Automatic conversion of wrapper class object into primitive data type is known as auto unboxing.
+Compiler internally uses XXXvalue method to convert wrapper object to primitive data type.
+In program we can use primitive and wrapper objects for each other bcoz compiler will internally resolve the issue by autoboxing and auto unboxing.
+If we use wrapper objects inside the class as a data member its default value will be NULL bcoz for objects default value is always NULL and for primitive data type default value is 0.
+In autoboxing if the object with the same value is already present then it wont create the new object instead it will create a reference to it.
+Internally to provide support for autoboxing a buffer of wrapper objects will be created at the time of wrapper class loading and at the time of object creation if the value is already present in that buffer then JVM will resuse that value but the range of the buffer is -128 to 127 if the value is greater than that then JVM will create a new object.
+Buffer concept is not applicable for float and double types.
+Value of method internally uses the buffer if the value is present then new object won't be created thats it is recommended to use the valueof method for creating wrapper object instead of constructor.
+If there are 2 methods one accept wrapper object and other accept primitive then jvm will give preference to primitive.
+Eg 
+M1(Integer i)
+Syso "autoboxing";
+M1(long l)
+Syso "widening";
+Main()
+int i=10;
+M1(i);the method which accepts primitive will get the preference bcoz jvm will give the preference to widening over autoboxing as well as varargs method also.
+WIDENING >> WRAPPER CLASS >> VARARGS .
+if all the methods eligible for the passed value then only this sequence is beneficial.
+Different primitive data type cannot be converted into different wrapper class object.
+Eg ----- conversion of int to Long is not possible.
+Autoboxing then widening is possible in java 
+Eg int to Integer then Object is possible.

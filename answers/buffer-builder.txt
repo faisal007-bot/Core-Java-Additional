@@ -1,0 +1,19 @@
+Capacity means how many objects or Characters we can add and size and length represents current content present in the collection or stringbuilder or stringbuffer.
+Default initial capacity of stringbuffer and stringbuilder is 16 means we can add upto 16 characters, if it reaches its max capacity a new object will be created and reference is changed to newly created object and old object will be garbage collected.
+Formula followed by stringbuffer or stringbuilder when it reaches its current capacity 
+New capacity = (current capacity + 1) * 2 .
+Stringbuffer sb = new stringbuffer ("test");
+Capacity of this stringbuffer = 16 + length of string (4) = 20.
+Setlength method is used to remove the elements after the provided length.
+After creating the stringbuffer or stringbuilder object if we want to increase its capacity we can use the ensurecapacity method and pass the capacity in integer.
+If we want to reduce the capacity of the stringbuffer or stringbuilder we can later use the trimtosize method to reduce the size to current length of the string.
+Stringbuffer sb = new stringbuffer (1000);
+sb.append("abc");
+sb.trimtosize(); capacity of the sb now = 3
+All the methods of the stringbuffer class are synchronised.
+If we want to allow multiple threads to operate on the object then we should use the stringbuilder class.
+Only difference between stringbuffer and stringbuilder is synchronisation , stringbuffer is synchronised and stringbuilder is non synchronised.
+If the return type of the method is same as that of the object we can do method chaining ,in string , stringbuffer and stringbuilder method chaining is possible.
+Eg 
+Stringbuffer sb = new Stringbuffer ();
+Sb.append("red").append("black").insert(2,"456"). reverse ();

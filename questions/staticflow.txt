@@ -1,0 +1,6 @@
+execution of static flow?
+identification of static members from top to bottom
+assignment of static data members then execution of static block from top to bottom
+then main method will be executed
+which class main method will be executed in case of multiple classes.
+why we cant access the non static members directly inside the static context.

@@ -1,0 +1,8 @@
+when scp objects will be destroyed?
+how to create class that creates new object when the value is different?
+make class final make data members as private.
+create the parameterized constructor
+create the method that returns the current class instance
+and create the new object only if the value is different using if else.
+runtime objects are created where?
+intern method use and working?

@@ -1,0 +1,25 @@
+Try with finally block is used to close the resources implicitly so we doesnt need to provide the finally block for closing the connection.
+Syntax - try (RESOURCES){} catch(exception e){}
+When the try block ends either normally or abnormally the resources will be closed automatically.
+We can create any number of resources inside the try with resources but it must be separated by semicolon .
+Resources inside the try with resources must implement the autocloseable interface otherwise we cant use those classes inside the try with resources.
+All the database related , IO related and networking related classes implemnts the autocloseable interface so we can use them inside the try with resources.
+Autocloseable interface contains only one method close();
+All the resources we define inside the try with resources are by default final so we cant reassign a value to that resource inside the try body.
+Try with resource block can be used independently bcoz we doesn't need to write the finally block with try block.
+multi catch block
+In multi catch block if two catch blocks handling code is same then we can combine them in a single catch block using the concept of multiple catch blocks
+Syntax catch(arithmeticException | nullpointerexception e){}
+This is called multi catch block.
+If all the exceptions occur defined inside the multi catch block then the first exception that occured inside the try block will be executed .
+In multi catch block there is no parent child relationship should be there inside the multi catch block.
+exception propagation
+If we used throws clause with method and if exception occurs then the exception object will be propagated to the caller method and its is responsibility to handle the exception using try catch or using throws clause if we use throws clause exception object will be propagated until default exception handler gets that exception object.
+exception rethrowing
+We can convert one exception object into the another exception object using the throw keyword inside the catch block .
+This concept is known as rethrowing an exception.
+Eg catch(arithmeticException e)
+{
+ Throw new Nullpointerexception ();
+}
+In this example we have converted the arithmeticException into the Nullpointerexception this concept is known as exception rethrow .

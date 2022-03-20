@@ -1,0 +1,6 @@
+steps performed for instance flow when we create object?
+how many times instance flow will occur?
+how many times static flow will occur?
+identification of instance members from top to bottom
+assignment of instance variables from top to bottom
+execution of instance block -> then constructor.

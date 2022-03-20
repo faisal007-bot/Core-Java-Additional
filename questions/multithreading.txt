@@ -1,0 +1,10 @@
+can we overload the run method of runnable interface?
+if we doesnt override the run method what will happen?
+what is the priority of the main thread and what is the priority of threads created by the user?
+example of daemon thread?
+what is starvation and what is deadlock?
+how many locks a thread can acquire at a time?
+what is the use of the yeild method?
+what is the use of the join method?
+how to call the join method on the object of main thread?
+what is the use of the sleep method?

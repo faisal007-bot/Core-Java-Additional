@@ -1,0 +1,30 @@
+Whenever exception occurs the method in which exception occurs is responsible to create the object of exception and it provides name of the exception,location and cause of exception and then it gives this exception object to JVM.
+If we doesn't handle exception JVM will give this runtime exception object to the default exception handler which is the part of the JVM to print unhandled exceptions.it terminates the program abnormally.
+Throwable is the root class of exception hierarchy
+Exceptions are recoverable.
+Errors are non recoverable.
+Error mostly caused by lack of system resources while exception is caused by our program.
+The exceptions that are checked by compiler for smooth execution of the program is known as checked exception.
+The exceptions that are not checked by the compiler is known as unchecked exception.
+Both checked and unchecked exception occurs at runtime only.
+Runtime exception class and its child classes and error and its child classes are the example of unchecked exception except this remaining are the checked exception.
+If exception occurs inside the catch block then it will be terminated abnormally bcoz to handle catch block exception there is nothing.
+If we want exception name , description and location then we must use printstacktrace method.
+If we want only exception name and description then we should use 
+e or e.toString inside the print method.
+If we want only description of the exception then we should use the
+e.getMessage method.
+Default exception handler internally uses printstacktrace method to print the exception.
+If we use try with multiple catch blocks then exception blocks must be child to parent from top to bottom .
+If we take parent catch block first then child catch block then compile time error will occur.
+If multiple catch blocks handle the same Exception then compile time error will occur.
+Finally block include clean up activities for try block and finalize method perform clean up activities for objects.
+We can use try and catch and finally inside outer try and catch and finally.
+Try with catch or finally or both is allowed
+Catch and finally must be present with try
+Order of exception handling must be first try then catch and then finally
+In nested try catch we can throw the same Exception as of outer try catch block.
+If any other statement present between try catch and finally is oresent it will throw an error.
+No other code must be present between try catch and finally.
+With try multiple catch blocks are allowed but only one finally block is allowed with try.
+For try catch and finally blocks curly braces are mandatory otherwise error will occur.

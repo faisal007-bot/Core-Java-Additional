@@ -1,0 +1,119 @@
+We should use multi threading if there is no dependency between multiple tasks.
+Thread scheduler is a part of jvm Which is responsible for scheduling the thread execution.
+Thread class start method is responsible to execute the run method of our class , if we use run method instead of start method then it will be executed as a normal method so JVM doesn't provide the different stack for the execution of the method .only one stack is allocated to the main thread.
+Overloading of run method is possible but thread class start method calls the run method will no arguments.
+If we doesnt override the run method then the run method of thread class will be executed which has empty implementation of run method of runnable interface.
+If we override the start method then that start method will be executed instead of thread class start method and it doesn't provide separate thread it will be executed as a normal method.
+If we call super.start() from child class start method then it will call the start method of thread class and it will create a separate stack which will be responsible for the execution of run method and main thread is responsible for the execution of start method of child class.
+After starting the thread we cant use the start method again on the same thread object else it will throw illegal thread State exception . runnable interface contains only one method run method.
+Constructor of thread class -------
+Thread();
+Thread (string name);
+Thread (runnable r);
+Thread (runnable r, string name);
+Thread (threadgroup g,string name);
+Thread (threadgroup g, runnable r);
+Thread (threadgroup g, runnable r , string name);
+Thread (threadgroup g, runnable r, string name,long stacksize);
+In thread class constructor we can pass the object of out thread class bcoz indirectly it is the child of runnable interface so we can pass it as a runnable inside the thread constructor.
+We can also change the name of main thread.
+Default priority of main thread is 5 and all the other threads priority depends upon the priority of their parent thread .
+If 2 or more threads are waiting for each other to release a lock then it is called as deadlock.
+Synchronised keyword is responsible for deadlock situation hence its dangerous and should be used with precautions and only use when it is necessary.
+Waiting of a thread for certain amount of time and after that time this waiting will end then its called as a starvation.
+Methods for inter thread communication
+Wait() , notify () and notifyAll().
+These methods are present in object class bcoz if a thread has to call these methods on any java object then it must be defined in object class hence all these methods are present in object class instead of thread class.
+These methods we can use only in the synchronised area and the thread must be the owner of that object on which it wants to call these methods.
+If thread calls wait method on the object then this thread will release the lock of that particular object and enters into the waiting state.
+If thread calls notify and notifyAll method on the object then this thread may not immediately releases the lock but it will definitely release the lock bcoz other threads are waiting for acquiring the lock to perform their execution.
+WAIT METHOD
+PUBLIC FINAL VOID WAIT();
+PUBLIC FINAL NATIVE VOID WAIT (LONG MILLISECONDS);
+PUBLIC FINAL VOID WAIT (LONG MILLISECONDS,INT NANOSECONDS);
+all the wait methods throw interrupted exception if any other thread interrupts them while in the waiting state.
+The thread after calling wait method goes into waiting state and then after this it goes into another waiting state to get the lock of the object then it goes into ready or runnable state.
+We should use notify method only if single thread is waiting for that object but if there are multiple threads are waiting for that object then it must use the notifyAll.
+Thread scheduler will choose which thread is unpredictable.
+notifyAll method gives notification to all the methods which are waiting for that object means if other threads waiting for another object they will not be notified.
+If multiple threads are operating on the same java object then there may rise a problem of data inconsistency.
+Synchronisation is used to avoid data inconsistency problem by providing object to the multiple threads one by one.
+Synchronisation is implemented using locks .
+Acquiring and releasing the lock is done by JVM.
+SYNCHRONIZED METHOD
+Each object in java has an unique lock.
+If class contains 2 synchronised methods and if one thread acquires the lock of the objext then other threads are not be able to access that object even if they want to execute different synchronised method bcoz lock is on object not on method.
+Reading operation on objects should be in non synchronised area and all the methods where state of the object is changing there we must use synchronised methods or block.
+If one object is being accessed by multiple threads then we need to use synchronisation on the method
+But if multiple threads accessing different object then synchronised method will cause data inconsistency problem.
+STATIC SYNCHRONISATION
+Every class in java has an unique lock.
+If thread wants to execute the static synchronised method then thread requies to acquire the class level lock.
+SYNCHRONISED BLOCK
+if very few lines of code needs synchronisation then we must use synchronised block instead of making the whole method as synchronised.
+Syntax synchronised (this) -> this represents current object means if the thread got the lock of current object then only it is allowed to execute the synchronised block.
+If we want to define a synchronised block of particular object then we can declare it using this syntax 
+If object is B then synchronised (B)
+And the thread which gets the lock of B object will be allowed to execute this synchronised block.
+If we want to declare synchronised block as a class level lock then following syntax is used
+Eg if class name is Test then synchronised (Test.class)
+If the thread got the class level lock then it will only be able to execute this synchronised block.
+Un synchronised block we can take only class and object reference and no other things are allowed.
+If multiple threads are operating on the same resource then there may be a possibility of data inconsistency problem this condition is known as race condition.
+A thread can acquire multiple locks but from different objects 
+Eg X x = new X(); 
+Thread t = new Thread();
+t.m1();
+Public synchronised void m1(){
+Here thread has lock X
+Y y = new Y();
+Synchronised (y)
+{
+Here thread has x and y locks
+Z z = new Z();
+Synchronised (z)
+{
+Here thread has x ,y and z locks
+}
+}
+}
+The code present inside the synchronied method or synchronised block is known as synchronised statement.
+The thread which execute in the background to provide the service to the foreground thread is known as a daemon thread .
+Eg garbage collector ,signal dispatcher etc.
+Daemon thread have low priority but according to our priorities daemon thread can have high priority also.
+We can use setdaemon method before starting the thread otherwise it will throw illegal thread State exception.
+Main thread is always non daemon thread.
+But for all other threads it depends on their parent if parent thread is daemon then child thread will also be daemon but if parent thread is non daemon then child thread will be non daemon.
+It is impossible to change the daemon nature of main thread .
+Daemon thread lifecycle depends upon the lifecycle of non daemon thread bcoz they provide service to the non daemon thread .
+JVM immediately terminate the daemon thread if its non daemon thread finishes the execution.
+YIELD METHOD
+Yield method causes the current executing thread to stop the execution if other threads having same priority are waiting for this thread.
+If yield method is called and all the other threads having low priority or no other thread is waiting then the method which called the yield method will continue its execution.
+After calling a yield method on currently executing thread then that thread will come into waiting state.
+JOIN METHOD
+if a thread wants to wait for other thread to complete its execution then we should use the join method.
+Join method should be used with the thread which wants to wait .
+Eg if t1 and t2 are 2 threads and if t1 wants to wait to finish the execution of t2 then we should use the t2.join method inside t1.
+Like if t2.join() is called then t1 will until t2 will finish its execution.
+join methods in java
+Public final void join();
+Public final void join (long milliseconds)
+Public final void join (long milliseconds,int nanoseconds)
+Every join method throws interrupted exception so we must handle it with throws clause or using try catch block.
+The waiting thread comes into ready state if the another thread complete its execution or time of join method will exceed or if the waiting thread got interrupted exception.
+Join method must be used after calling the start method on the thread on which we want to call the join method.
+How to join main thread
+Create the static reference variable in thread class and pass the reference of main thread using thread.currentthread() and assign its value inside the static variable and use that variable to join it inside the thread class.
+If multiple threads are waiting for each other to complete execution then this situation is known as deadlock situation bcoz all of the thread objects waiting for each other and simultaneously calling jjoin method on each other thread objects.
+If thread calls join method on its object then it is also known as deadlock situation.
+Eg thread.currentthread.join() causes deadlock bcoz main thread calling join method on the main thread or itself.
+SLEEP METHOD
+If thread doesn't want to execute for a particular amount of time then we should use the sleep method.
+SLEEP METHODS
+public static native void sleep (long milliseconds)
+Public static void sleep (long milliseconds, int nanoseconds)
+If any thread interrupts the sleep of the another thread then it will throw an interrupted exception.so it must be handled either by try catch or by using throws clause.
+A thread can interrupt a sleeping and waiting thread by using the interrupt method.
+A thread can use the interrupt method on the object of another thread to interrupt its sleeping or waiting state.
+If thread is not in waiting or sleeping state then there is no effect of interrupt method .

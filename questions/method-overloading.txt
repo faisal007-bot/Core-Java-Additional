@@ -1,0 +1,4 @@
+how compiler checks identifies methods?
+who is responsible to handle method overloading?
+in overloading compiler checks what?
+which method got preference if both the methods parameters are compatible with the provided values?

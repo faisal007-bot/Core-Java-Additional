@@ -1,0 +1,69 @@
+ource file name with normal class nd execution
+Source file with public class and execution
+How many public classes are available and good practice
+Fully qualified name, 
+Inport - explicit class import and implicit class import
+Preference of import , which is best practice , 
+If 2 classes present in different packages what will happen
+Static import and disadvantage and why used.
+Compilation time difference between import and Fully qualified name
+Difference between import of java and #include of c and why java import is called as load on deman or dynamic loading of classes.
+When we import what will be imported and what is not imported 
+How to import classes and interfaces present inside the subpackages.
+Which package classes and interfaces are available without importing 
+Java.lang.* and classes and interfaces in the present working directory
+Execution time doesn't depend on the import or Fully qualified name.
+What is system.out.println .
+Static import priority current class static variable then explicit static import then implicit static import.
+Static import causes ambiguity bcoz there are lots of static method and variable with same name present in different classes.
+Package name convention should be written in reverse domain name.
+Every java program can contain either 0 or 1 package statement.
+All the methods of the final class are implicitly or by default final.
+Variable inside the final class are not final by default.
+Abstract method cannot be used with other modifiers like final synchronised native static private and strictfp.
+Abstract class can contain final method but final class cannot contain abstract method .
+Protected method and variable outside the package can only be accessed using the reference of the child class 
+We can't access the protected method and variable outside the package with parent class reference.
+We can declare final instance variable without value but we need to provide it a value otherwise compile time error will occur.
+If the instance variable is final then JVM doesn't provide default value .
+Final instance variable can be initiated at the time of declaration ,
+Inside instance initializer block and inside the comstructor.
+We can declare final static variable without value but we need to provide it a value otherwise compile time error will occur.
+If the static variable is final then JVM doesn't provide default value .
+Final static variable can be initialized at the time of declaration and inside the static initializer block.
+If local variable is local final variable or not we can skip initialization and program will be executed but if we try to use local or local final variable to use without initialization then compile time error will happen.
+Local variable have only one access modifier which is final.
+Static variable class and methods 
+Restrictions of static method
+Main method overloading
+Overloading of static method 
+Static method should contain implementation
+Main method inside parent or main method inside parent as well as child class
+Static method in inheritance.
+Synchronised modifier is used only with methods and blocks
+Synchronised method should contain implementation
+Native modifier can only be used with methods only
+Methods implemented in other languages like c ,c++ are known as native methods.
+Native keyword is used to improve performance of the java application.Oad system libraries at the time of classloading using static block then declare the native method with implementation and then call the native method.
+Hashcode method is a native method .
+Transient modifier can only be applied only to variables.
+Transient keyword is used in serialization it avoids serialisation of original value of the variable and provides default value.
+Volatile modifier can only be applied to variables.
+By making variable as volatile it creates separate copy of variable for each thread and hence removes the Problem of data inconsistency.
+But if large number of threads are accessing volatile variable large number of variable copy will be created .
+It is not recommended to use.
+Extends must be used before implements in inheritance.
+If 2 interfaces contains same method then in implementation class we need to provide the implementation of only one method.
+If 2 interfaces contains same method name but different parameters then we need to provide implementation of both the methods and in child class this is known as overloading.
+If 2 interfaces contains same method but different return type then it is not possible to implement both the interfaces.
+2 interfaces can contain same variable and if we access it with child class Directly with variable name compiler gives error so we can solve this error by using interface name bcoz variables of the interface are static .
+An interface without any methods and it provides ability to the class object then it is called as marker interface , jvm internally provides ability to the objects through marker interface to reduce the complexity and make the java program simple.
+Adapter class is a simple java class which implements interface and provides empty implementation of all the methods of the interface and it must be declared with abstract keyword to prevent the object creation bcoz all the methods are empty .
+Adapter class is used to increase the readability of the program so we doesn't need to implement all the methods of the interface instead we can extend the adapter class to provide the implementation of only method we want to provide implementation .
+Whenever we create child class object the constructor of abstract class will be executed.
+Even after using the constructor inside the abstract class we cant create the object internally or externally its only used to initialize the child class object.
+Constructors are not supported in interface bcoz it is used to initialize the instance variable and interface doesn't contain instance variable.
+We can use static and initializer block inside the abstract class but not inside the interface.
+Whenever we create child class object parent class object won't be created.
+Parent comstructor only executed for child class initialization and it doesn't creates parent class object.
+New keyword is responsible for object creation and constructor is responsible for object initialization.

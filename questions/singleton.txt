@@ -1,0 +1,2 @@
+what is singleton class and how to create it?
+2 methods to create singleton class?

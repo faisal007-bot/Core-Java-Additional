@@ -1,0 +1,17 @@
+can we create static members inside the member inner or regular inner class?
+can we access all the members of the outer class or not?
+can we declare local inner class inside the instance and static method?
+local inner class can access what members of the outer class when declared inside the instance method?
+local inner class can access what members of the outer class when declared inside the static method?
+can we access local variables of outer class method inside the local inner class?
+types of anonymous inner class?
+type of object will be created for anonymous inner class?
+how to access the members of the anonymous inner class?
+class file will be generated for inner classes or not?
+can anonymous inner class extends another class or interface or both?
+can we create the constructor inside the anonymous inner class?
+what members can be declared inside the static nested class?
+what members can we access inside the static nested class of outer class?
+inner interface are assigned with which keyword by default?
+class inside the interface is assigned with which keyword by default?
+interface inside the class is by default is declared with which keyword?

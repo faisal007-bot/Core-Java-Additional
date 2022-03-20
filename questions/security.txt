@@ -1,0 +1,3 @@
+how to achieve data hiding?
+how to achieve abstraction?
+what is fully encapsulated class and how to make it?

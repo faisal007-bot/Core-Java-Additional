@@ -1,0 +1,11 @@
+who is responsible for checking the method resolution in overriding?
+can we make concrete method as abstract in overriding?
+can we make abstract method as concrete in overriding?
+can we make non final method as final in overriding?
+can we make synchronised to non synchronised and non synchronised to synchronised 
+in overrding?
+can we make native to non native and non native to native in overriding?
+can we make strictfp to non strictfp and non strictfp to strictfp in overriding?
+can we make static method as instance method in overriding?
+can we make instance method as static method in overriding?
+what is method method hiding and who is responsible to handle method hiding?

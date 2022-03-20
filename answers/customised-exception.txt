@@ -1,0 +1,12 @@
+Throw keyword should be used with user defined exceptions.
+We must use constructor with string as argument and inside constructor we need to call the super and pass the string to parent in order to pass the custom exception description to default exception handler to throw an exception.
+While defining custom exceptions it is recommended to extend the runtime exception class bcoz if we extend exception class we need to provide try catch or throws keyword to handle the exception even though we are using the throw keyword still compiler won't compile our code .
+Parent object cant be type cast to child object but child object can be type cast to parent object.
+If we access any method recursively then stack overflow error will occur.
+If jvm fails to find the required .class file then it will raise a noclassdeffoundexception.
+If we get any error while initializing the static variable and static block then jvm will throw exception in initialization error.
+If we pass any value to the method which is illegal or wrong then it will throw an illegal argument exception.
+If we try to convert string to number and it is non convertible then it will throw a number format exception.
+If we call a method at wrong time then JVM will throw an
+ illegal state exception.
+If assert condition fails to satisfy then assertion exception will occur.

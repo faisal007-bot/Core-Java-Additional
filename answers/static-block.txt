@@ -1,0 +1,24 @@
+Static blocks should be used to load native libraries in our program.
+Static blocks can be used to execute java program without main method.But it will print the error that main method is not found.
+But we can prevent the error by using system.exit(0) inside the static block.
+We can print something on the console without main method and static block using static variable 
+Eg 1
+Public static int x = m1();
+Public static int m1(){
+System.out.println("hello");
+System.exit(0);
+Return 1;
+}
+Eg 2
+Public static Test t = new Test();
+{
+System.out.println("hello");
+System.exit(0);
+}
+Eg 3
+Public static Test t = new Test();
+Test(){
+System.out.println("hello");
+System.exit(0);
+}
+It is possible only before java 1.7 to execute a program without main method.
